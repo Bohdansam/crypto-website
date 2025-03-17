@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* global styles */
+body {
+  @apply antialiased bg-cryptoBG1 text-cryptoWhite font-sans;
+}
