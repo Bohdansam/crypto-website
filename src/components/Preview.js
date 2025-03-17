@@ -19,7 +19,7 @@ function Preview() {
                 <h2 className="text-3xl font-semibold text-white mt-10 mb-5">
                     Our Partners
                 </h2>
-                <div className="flex flex-col md:flex-row justify-center items-center w-full max-w-md mx-auto gap-10">
+                <div className="ml-12 flex flex-col md:flex-row justify-center items-center w-full max-w-md mx-auto gap-10">
                     <img 
                         src="https://i.imgur.com/9xf6Ybl.png" 
                         alt="Partner 1" 

@@ -5,18 +5,31 @@ import reportWebVitals from './reportWebVitals';
 import './styles/tailwind.css';
 
 import Navbar from './components/Navbar';
-/*
+
 import Preview from './components/Preview';
 import BitcoinPrice from './components/BitcoinPrice'
-import BitcoinTable from './components/BitcoinTable'
-*/
+import BitcoinTable from './components/Update'
+import HowItWorks from './components/Work';
+import Rockie from './components/Rockie';
+import CryptoTradePromo from './components/Download';
+import CustomerReviews from './components/Customers';
+import Earn from './components/EarnUp';
+import Footer from './components/Footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <>
   <Navbar /> 
+  <Preview />
+  <React.StrictMode>
+    <BitcoinPrice />
+    <BitcoinTable />
+  </React.StrictMode>
+  <HowItWorks />
+  <Rockie />
+  <CryptoTradePromo />
+  <CustomerReviews />
+  <Earn />
+  <Footer />
+  </>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
