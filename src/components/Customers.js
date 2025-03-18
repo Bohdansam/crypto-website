@@ -1,5 +1,8 @@
+import AnimatedDiv from "../AnimatedDiv/AnimatedDiv";
+
 function CustomerReviews() {
   return (
+    <AnimatedDiv>
     <div className="bg-cryptoBG1 py-32 sm:px-6 lg:px-20">
       <div className="w-full h-full mx-auto flex flex-col md:flex-row sm:items-center sm:text-center justify-between">
         
@@ -55,6 +58,7 @@ function CustomerReviews() {
 
       </div>
     </div>
+    </AnimatedDiv>
   );
 }
 

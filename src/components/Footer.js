@@ -1,7 +1,9 @@
 import React from 'react';
+import AnimatedDiv from '../AnimatedDiv/AnimatedDiv';
 
 const Footer = () => {
   return (
+    <AnimatedDiv>
     <footer className="bg-cryptoBG1 pt-12 text-gray-400 px-4 sm:px-0"> 
       {/* Добавлен класс px-4 для мобильных устройств и sm:px-0 для устройств с шириной экрана больше 640px */}
       <div className="container mx-auto">
@@ -56,6 +58,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+    </AnimatedDiv>
   );
 };
 

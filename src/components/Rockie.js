@@ -1,5 +1,8 @@
+import AnimatedDiv from "../AnimatedDiv/AnimatedDiv";
+
 function Rockie() {
     return (
+        <AnimatedDiv>
         <div className="bg-cryptoBG1 py-16 px-4 md:px-8 flex flex-col md:flex-row items-center justify-between">
             {/* Left Part - Image Section */}
             <div className="max-w-[800px] text-center md:text-left max-w-lg md:m-20">
@@ -43,6 +46,7 @@ function Rockie() {
                 </div>
             </div>
         </div>
+        </AnimatedDiv>
     );
 }
 

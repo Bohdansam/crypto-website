@@ -1,4 +1,7 @@
+"use client";
+
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -8,7 +11,12 @@ function Navbar() {
     };
 
     return (
-        <nav className="container mx-auto flex justify-between items-center py-6 px-1 relative">
+        <motion.nav
+            className="container mx-auto flex justify-between items-center py-6 px-1 relative"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2 }}
+        >
             {/* Logo and Text Section */}
             <div className="flex items-center text-2xl text-right font-semibold leading-none tracking-widest ml-8 md:ml-0">
                 <a href="/homepage" aria-label="Homepage" className="flex items-center">
@@ -39,7 +47,14 @@ function Navbar() {
             </div>
 
             {/* Mobile Menu */}
-            <div className={`fixed inset-0 transition-transform duration-500 ease-in-out transform ${isOpen ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'} bg-black bg-opacity-50 flex justify-center items-start md:hidden z-50`} role="dialog" aria-modal="true">
+            <motion.div
+                className={`fixed inset-0 transition-transform duration-500 ease-in-out transform bg-black bg-opacity-50 flex justify-center items-start md:hidden z-50`}
+                initial={{ opacity: 0, x: '-100%' }}
+                animate={{ opacity: isOpen ? 1 : 0, x: isOpen ? '0%' : '-100%' }}
+                transition={{ duration: 0.5 }}
+                role="dialog"
+                aria-modal="true"
+            >
                 <div className="bg-cryptoBG1 w-full h-full flex flex-col justify-start items-center p-8 relative">
                     <button onClick={toggleMenu} className="absolute top-4 right-4 text-gray-600 hover:text-gray-800 focus:outline-none" aria-label="Close menu">
                         <svg className="w-10 h-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -47,7 +62,6 @@ function Navbar() {
                         </svg>
                     </button>
                     <div className="flex flex-col items-center pt-20 space-y-6">
-                        {/* Apply smaller text size when menu is open and position text higher */}
                         <button className={`hover:text-cryptoGray transition-all duration-300 ${isOpen ? 'text-xl' : 'text-sm'}`}>Homepage</button>
                         <button className={`hover:text-cryptoGray transition-all duration-300 ${isOpen ? 'text-xl' : 'text-sm'}`}>Buy Crypto</button>
                         <button className={`hover:text-cryptoGray transition-all duration-300 ${isOpen ? 'text-xl' : 'text-sm'}`}>Exchange</button>
@@ -58,10 +72,9 @@ function Navbar() {
                         </button>
                     </div>
                 </div>
-            </div>
-        </nav>
+            </motion.div>
+        </motion.nav>
     );
 }
 
-export default Navbar;
-;
+export default Navbar;;

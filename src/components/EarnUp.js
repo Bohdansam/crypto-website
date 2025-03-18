@@ -1,5 +1,8 @@
+import AnimatedDiv from "../AnimatedDiv/AnimatedDiv";
+
 function Earn() {
     return (
+        <AnimatedDiv>
         <div className="bg-cryptoBG2">
             <div className="w-full min-h-[140px] mx-auto flex flex-col items-start text-center px-4 pt-12 pb-20"> 
                 <h1 className="text-2xl md:text-4xl font-extrabold">
@@ -10,6 +13,7 @@ function Earn() {
                 </h2>
             </div>
         </div>
+        </AnimatedDiv>
     );
 }
 

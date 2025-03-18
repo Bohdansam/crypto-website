@@ -1,3 +1,5 @@
+import AnimatedDiv from '../AnimatedDiv/AnimatedDiv';
+
 import React, { useState, useEffect } from 'react';
 import { Line } from 'react-chartjs-2';
 import {
@@ -97,6 +99,7 @@ function CryptoTable() {
   };
 
   return (
+    <AnimatedDiv>
     <div className="pt-10 px-4 sm:pt-20 sm:pl-40 overflow-x-auto">
       <table className="min-w-full table-auto text-lg sm:text-xl border-collapse">
         <thead>
@@ -146,6 +149,7 @@ function CryptoTable() {
         </tbody>
       </table>
     </div>
+    </AnimatedDiv>
   );
 }
 
