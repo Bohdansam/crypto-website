@@ -3,6 +3,8 @@
 # Project made by Bohdan
 [My LinkedIn](https://www.linkedin.com/in/bohdan-samarin-889965353/)
 
+[Project Link](https://crypto-website-opal.vercel.app/)
+
 # Description
 
 ## This is a responsive web application using React js and Tailwind css, with the CoinGecko Api, in order to quickly display prices and charts related to cryptocurrencies.
